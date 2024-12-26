@@ -1,0 +1,33 @@
+{
+  "name": "nextjs_dsp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "export": "next export"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "jsonwebtoken": "^8.5.1",
+    "mysql2": "^3.11.5",
+    "next": "^15.0.4",
+    "react": "^19.0.0",
+    "react-color-palette": "^7.3.0",
+    "react-dom": "^19.0.0",
+    "tw-elements": "^2.0.0",
+    "zustand": "^5.0.2"
+  },
+  "devDependencies": {
+    "@types/node": "22.10.1",
+    "@types/react": "19.0.1",
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.49",
+    "tailwindcss": "^3.4.16",
+    "typescript": "5.7.2"
+  }
+}

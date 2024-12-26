@@ -1,0 +1,42 @@
+.content {
+  flex: 1;
+  padding: 1rem;
+}
+
+.timeline {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.timeline_item {
+  display: flex;
+  margin-bottom: 1rem;
+  align-items: stretch; /* 왼쪽과 오른쪽 높이 맞추기 */
+  gap: 10px; /* 왼쪽과 오른쪽 간격 */
+}
+
+.timeline_item .left {
+  flex: 0 0 20%;
+  max-width: 200px;
+  padding: 1rem;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.timeline_item .right {
+  flex: 1;
+  padding: 1rem;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.timeline_item .date {
+  font-weight: bold;
+  color: #333;
+}

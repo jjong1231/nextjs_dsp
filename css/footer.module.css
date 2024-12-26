@@ -1,0 +1,12 @@
+/* Footer.module.css */
+.footer {
+  padding: 10px;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  position: fixed; /* 화면 하단에 고정 */
+  bottom: 0;
+  left: 0;
+  width: 100%; /* 전체 너비 */
+  text-align: center;
+}

@@ -1,0 +1,56 @@
+      /* 큰 박스 스타일 */
+      .container {
+        position: relative;
+        width: 280px;
+        height: 150px;
+        border: 2px solid #000;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      /* 작은 박스 스타일 */
+      .small-box {
+        width: 220px;
+        height: 80px;
+        background-color: #e0f2fe;
+        border: 2px solid #000;
+      }
+
+      /* 화살표 스타일 */
+      .arrow {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: red; /* 화살표 색상 */
+        font-size: 18px;
+        font-weight: lighter;
+      }
+
+      .arrow::after {
+        content: "↕"; /* 양방향 화살표 */
+        font-size: 32px;
+      }
+
+      /* 상, 하, 좌, 우 위치 설정 */
+      .arrow-top {
+        top: 5px;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+      .arrow-bottom {
+        bottom: 5px;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+      .arrow-left {
+        left: 5px;
+        top: 50%;
+        transform: translateY(-50%) rotate(90deg);
+      }
+      .arrow-right {
+        right: 5px;
+        top: 50%;
+        transform: translateY(-50%) rotate(90deg);
+      }
