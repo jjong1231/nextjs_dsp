@@ -31,7 +31,7 @@ const Navbar = () => {
               <li><Link href="/jwt">JsonWebToken</Link></li>
               <li><Link href="/join">회원등록</Link></li>
               <li><Link href="/insert">데이터추가</Link></li>
-              <li><Link href="/modal">모달창</Link></li>
+              <li><Link href="/slideModal">슬라이드모달</Link></li>
               <li><Link href="/timeline">타임라인</Link></li>
               <li><Link href="/accordion">아코디언</Link></li>
             </ul>

@@ -18,3 +18,37 @@ body {
   min-height: 100vh;
   background-color: #475569;
 }
+
+.circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  background-color: red;
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  border-radius: 50%; /* 원형으로 만듦 */
+}
+
+/* 돋보기모양 */
+.magnifier {
+  width: 24px;
+  height: 24px;
+  border: 2px solid black; /* 원 모양 */
+  border-radius: 50%; /* 둥근 모양 */
+  position: relative;
+}
+
+.magnifier::after {
+  content: '';
+  width: 10px;
+  height: 2px;
+  background: black;
+  position: absolute;
+  top: 60%;
+  left: 60%;
+  transform: rotate(45deg);
+  transform-origin: center;
+}
