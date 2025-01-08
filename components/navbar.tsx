@@ -41,9 +41,21 @@ const Navbar = () => {
             onMouseEnter={()=>setActiveMenu(1)}
             onMouseLeave={()=>setActiveMenu(null)}
           >
-            <a href="#">영역설정</a>
+            <a href="#">회원관리</a>
             <ul className={`${style.submenu} ${ activeMenu===1 ? style.active : ""}`}>
-              <li><Link href="/zoneList">영역리스트</Link></li>
+              <li><Link href="/member">회원리스트</Link></li>
+            </ul>
+          </li>
+
+          <li 
+            className={style.menuItem}
+            onMouseEnter={()=>setActiveMenu(2)}
+            onMouseLeave={()=>setActiveMenu(null)}
+          >
+            <a href="#">매체관리</a>
+            <ul className={`${style.submenu} ${ activeMenu===2 ? style.active : ""}`}>
+              <li><Link href="/media">매체리스트</Link></li>
+              <li><Link href="/zone">영역리스트</Link></li>
             </ul>
           </li>
 

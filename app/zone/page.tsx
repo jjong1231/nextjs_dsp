@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from 'react'
 import ZoneList from '../../components/zoneList';
 import Pagenation from '../../components/pagenation';
+import Link from 'next/link';
 
 const page = () => {
 
@@ -56,10 +57,9 @@ const page = () => {
     <div className='w-full px-10'>
       <div className="flex justify-between items-center m-5">
         {/* <h1 className="text-5xl font-extrabold dark:text-white"></h1> */}
-        <div><button
-        className='p-2 border rounded-lg hover:bg-red-400'
-        onClick={()=>location.href='zoneList/addZone'}
-        >영역추가</button></div>
+        <div>
+          <Link href='zone/addZone' className='p-2 border rounded-lg hover:bg-red-400'>영역추가</Link>
+        </div>
         <div>
           <input
             id="keywords"

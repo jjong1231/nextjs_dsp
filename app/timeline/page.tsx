@@ -9,6 +9,7 @@ const page = () => {
   return (
 
     <div className={css.content}>
+      <h1>타임2라인</h1>
 
       <ul className={css.timeline}>
         {userGrade==80?(

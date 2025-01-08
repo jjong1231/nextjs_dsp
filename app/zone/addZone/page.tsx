@@ -12,6 +12,7 @@ import { LuArrowLeftToLine, LuArrowRightToLine, LuArrowUpToLine, LuArrowDownToLi
 import { GoArrowBoth } from "react-icons/go";
 import { BsExclamationCircle, BsArrowsCollapseVertical, BsArrowsCollapse,  } from "react-icons/bs"; //느낌표, 좌우,상하
 
+
 const page = () => {
 
   const [alertView, setAlertView] = useState(false);
@@ -21,8 +22,6 @@ const page = () => {
   const alertOpen = (c,m) => { setAlertColor(c); setAlertMsg(m); setAlertView(true); };
   const alertClose = () => { setAlertView(false); };
 
-
-
   const [name,setName] = useState('');        //영역명
   const [bnType,setBnType] = useState(2);     //배너타입 
   const [wid,setWid] = useState(320);         //가로사이즈 
@@ -31,7 +30,7 @@ const page = () => {
   const [slotH,setSlotH] = useState(1);       //슬롯세로갯수
   const [zoneAcc,setZoneAcc] = useState(1);   //운영구좌수
   const [plf,setPlf] = useState('M');         //플랫폼 P,M
-  const [stepActive,setStepActive] = useState(3);   //클릭한 Step 표시설정 
+  const [stepActive,setStepActive] = useState(1);   //클릭한 Step 표시설정 
 
   //박스그림자 
   const [boxShadow,setBoxShadow] = useState('N');   //박스그림자 없음:N,:사용 
@@ -78,15 +77,15 @@ const page = () => {
   const openStep = (no)=>{ setStepActive(no); }   //step이동
   const fnBnType = (no)=>{ setBnType(no); }       //배터타입 선택 
 
-  const [activeTab, setActiveTab] = useState("tab2"); //step2 탭버튼 1:box,2:slot
+  const [activeTab, setActiveTab] = useState("tab1"); //step2 탭버튼 1:box,2:slot
 
   //슬롯갯수 실시간 슬롯사이즈 계산 
   const [slotSize,setSlotSize] = useState('');      //슬롯갯수 적용한 1슬롯 실사이즈 
   const fn_slotSize = ()=>{
-      //실사이즈 가로 = 가로-(테두리두께+박스패딩 좌,우+슬롯간격+슬롯두께)
-      const w = String((wid - ( (boxBorder=='Y'?(boxBorderPx*2):0) + (pr+pl) + (slotGap*slotW) ))/slotW).split('.');
-      const h = String((hei - ( (boxBorder=='Y'?(boxBorderPx*2):0) + (pt+pb) + (slotGap*slotH) ))/slotH).split('.');
-      setSlotSize(w[0]+"x"+h[0]);
+    //실사이즈 가로 = 가로-(테두리두께+박스패딩 좌,우+슬롯간격+슬롯두께)
+    const w = String((wid - ( (boxBorder=='Y'?(boxBorderPx*2):0) + (pr+pl) + (slotGap*slotW) ))/slotW).split('.');
+    const h = String((hei - ( (boxBorder=='Y'?(boxBorderPx*2):0) + (pt+pb) + (slotGap*slotH) ))/slotH).split('.');
+    setSlotSize(w[0]+"x"+h[0]);
   }
   
   const [slotBorder,setSlotBorder] = useState('N'); //슬롯보더
@@ -303,6 +302,7 @@ const page = () => {
     //블릿 이미지,텍스트 
 
     console.log(data);
+    return;
 
     const res = await fetch('/api/writeFile',{
       method:'POST',
